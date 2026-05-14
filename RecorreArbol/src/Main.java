@@ -7,9 +7,13 @@ public class Main {
        
        //tree.setDato(new NodoArbol[]{new NodoArbol(23, null), new NodoArbol(11, null)});
        
-       NodoArbol[] arrNodoArbol = new NodoArbol(23, null), new NodoArbol(11, null);
+       NodoArbol[] arrNodoArbol = {new NodoArbol(23, null), new NodoArbol(11, null)};
        
        tree.setHijo(arrNodoArbol);
-       System.out.println(tree.getDato());
+       //tree.setHijo(0, 50);
+       tree.getHijo()[0].setHijo(0, 50);
+       tree.getHijo()[0].setHijo(1, 100);
+       tree.getHijo()[1].setHijo(0, 40);
+       tree.preOrden();
     }
 }
